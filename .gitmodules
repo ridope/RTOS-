@@ -1,0 +1,86 @@
+[submodule "LiteXDir/migen"]
+	path = LiteXDir/migen
+	url = https://github.com/m-labs/migen.git
+	branch = 0.9.2
+[submodule "LiteXDir/pythondata-software-picolibc"]
+	path = LiteXDir/pythondata-software-picolibc
+	url = https://github.com/litex-hub/pythondata-software-picolibc.git
+[submodule "LiteXDir/pythondata-software-compiler_rt"]
+	path = LiteXDir/pythondata-software-compiler_rt
+	url = https://github.com/litex-hub/pythondata-software-compiler_rt.git
+	branch = 2020.08
+[submodule "LiteXDir/litex"]
+	path = LiteXDir/litex
+	url = https://github.com/enjoy-digital/litex.git
+	branch = 2021.12
+[submodule "LiteXDir/liteeth"]
+	path = LiteXDir/liteeth
+	url = https://github.com/enjoy-digital/liteeth.git
+	branch = 2021.12
+[submodule "LiteXDir/litedram"]
+	path = LiteXDir/litedram
+	url = https://github.com/enjoy-digital/litedram.git
+	branch = 2021.12
+[submodule "LiteXDir/litepcie"]
+	path = LiteXDir/litepcie
+	url = https://github.com/enjoy-digital/litepcie.git
+	branch = 2021.12
+[submodule "LiteXDir/litesata"]
+	path = LiteXDir/litesata
+	url = https://github.com/enjoy-digital/litesata.git
+	branch = 2021.08
+[submodule "LiteXDir/litesdcard"]
+	path = LiteXDir/litesdcard
+	url = https://github.com/enjoy-digital/litesdcard.git
+	branch = 2021.12
+[submodule "LiteXDir/liteiclink"]
+	path = LiteXDir/liteiclink
+	url = https://github.com/enjoy-digital/liteiclink.git
+	branch = 2021.12
+[submodule "LiteXDir/litescope"]
+	path = LiteXDir/litescope
+	url = https://github.com/enjoy-digital/litescope.git
+	branch = 2021.08
+[submodule "LiteXDir/litejesd204b"]
+	path = LiteXDir/litejesd204b
+	url = https://github.com/enjoy-digital/litejesd204b.git
+	branch = 2021.08
+[submodule "LiteXDir/litespi"]
+	path = LiteXDir/litespi
+	url = https://github.com/litex-hub/litespi.git
+	branch = 2021.12
+[submodule "LiteXDir/litehyperbus"]
+	path = LiteXDir/litehyperbus
+	url = https://github.com/litex-hub/litehyperbus.git
+	branch = 2021.12
+[submodule "LiteXDir/litex-boards"]
+	path = LiteXDir/litex-boards
+	url = https://github.com/litex-hub/litex-boards.git
+	branch = 2021.12
+[submodule "LiteXDir/pythondata-misc-tapcfg"]
+	path = LiteXDir/pythondata-misc-tapcfg
+	url = https://github.com/litex-hub/pythondata-misc-tapcfg.git
+	branch = 2020.08
+[submodule "LiteXDir/pythondata-misc-usb_ohci"]
+	path = LiteXDir/pythondata-misc-usb_ohci
+	url = https://github.com/litex-hub/pythondata-misc-usb_ohci.git
+[submodule "LiteXDir/pythondata-cpu-lm32"]
+	path = LiteXDir/pythondata-cpu-lm32
+	url = https://github.com/litex-hub/pythondata-cpu-lm32.git
+	branch = 2020.08
+[submodule "LiteXDir/pythondata-cpu-mor1kx"]
+	path = LiteXDir/pythondata-cpu-mor1kx
+	url = https://github.com/litex-hub/pythondata-cpu-mor1kx.git
+	branch = 2020.08
+[submodule "LiteXDir/pythondata-cpu-serv"]
+	path = LiteXDir/pythondata-cpu-serv
+	url = https://github.com/litex-hub/pythondata-cpu-serv.git
+	branch = 2020.08
+[submodule "LiteXDir/pythondata-cpu-vexriscv"]
+	path = LiteXDir/pythondata-cpu-vexriscv
+	url = https://github.com/litex-hub/pythondata-cpu-vexriscv.git
+	branch = 2020.08
+[submodule "LiteXDir/pythondata-cpu-vexriscv-smp"]
+	path = LiteXDir/pythondata-cpu-vexriscv-smp
+	url = https://github.com/litex-hub/pythondata-cpu-vexriscv-smp.git
+	branch = 2020.08
