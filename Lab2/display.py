@@ -22,12 +22,24 @@ class SevenSegment(Module):
         # Value to abcd segments dictionary.
         # Here we create a table to translate each of the 16 possible input
         # values to abdcefg segments control.
-        # -- TO BE COMPLETED --
         cases = {
           0x0: abcdefg.eq(0b0111111),
-          # [...]
+          0x1: abcdefg.eq(0b0000110),
+          0x2: abcdefg.eq(0b1011011),
+          0x3: abcdefg.eq(0b1001111),
+          0x4: abcdefg.eq(0b1100110),
+          0x5: abcdefg.eq(0b1101101),
+          0x6: abcdefg.eq(0b1111101),
+          0x7: abcdefg.eq(0b0000111),
+          0x8: abcdefg.eq(0b1111111),
+          0x9: abcdefg.eq(0b1101111),
+          0xa: abcdefg.eq(0b1110111),
+          0xb: abcdefg.eq(0b1111100),
+          0xc: abcdefg.eq(0b0111001),
+          0xd: abcdefg.eq(0b1011110),
+          0xe: abcdefg.eq(0b1111001),
+          0xf: abcdefg.eq(0b1110001),
         }
-        # -- TO BE COMPLETED --
 
         # Combinatorial assignement
         self.comb += Case(value, cases)
@@ -37,7 +49,7 @@ class SevenSegment(Module):
 class SevenSegmentDisplay(Module):
     def __init__(self, sys_clk_freq, cs_period=0.001):
         # Module's interface
-        self.values = Array(Signal(5) for i in range(6))  # input
+        self.values = Signal(5)  # input
 
         self.cs = Signal(6)      # output
         self.abcdefg = Signal(7) # output
@@ -64,10 +76,13 @@ class SevenSegmentDisplay(Module):
         cs = Signal(6, reset=0b000001)
         # Synchronous assigment
         self.sync += [
-            If(self.tick.ce,
-                # -- TO BE COMPLETED --
-                # [...] rotate cs
-                # -- TO BE COMPLETED --
+            If(self.tick.ce,     # At the next tick:
+                cs[1].eq(cs[0]), # bit1 takes bit0 value
+                cs[2].eq(cs[1]), # bit2 takes bit1 value
+                cs[3].eq(cs[2]), # bit3 takes bit2 value
+                cs[4].eq(cs[3]), # bit4 takes bit3 value
+                cs[5].eq(cs[4]), # bit5 takes bit4 value
+                cs[0].eq(cs[5])  # bit0 takes bit5 value
             )
         ]
         # Combinatorial assigment
@@ -75,15 +90,9 @@ class SevenSegmentDisplay(Module):
 
         # cs to value selection.
         # Here we create a table to translate each of the 8 cs possible values
-        # to input value selection.
-        # -- TO BE COMPLETED --
-        cases = {
-            0b000001 : seven_segment.value.eq(self.values[0]),
-            # [...]
-        }
-        # -- TO BE COMPLETED --
+        # to input value selection
         # Combinatorial assigment
-        self.comb += Case(self.cs, cases)
+        self.comb += seven_segment.value.eq(self.values)
 
 # Main ---------------------------------------------------------------------------------------------
 
